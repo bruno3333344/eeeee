@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento Facial</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #video {
+            width: 640px;
+            height: 480px;
+            border: 2px solid #000;
+            margin-bottom: 20px;
+        }
+
+        #canvas {
+            display: none;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Reconocimiento Facial</h1>
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
+
+    <div>
+        <button id="cargarModelos">Cargar Modelos</button>
+        <button id="tomarFoto">Tomar Foto</button>
+        <button id="alternarCamara">Alternar Cámara</button>
+        <input type="file" id="fotoAlumno" accept="image/*" />
+        <button id="cargarAlumno">Cargar Foto Alumno</button>
+    </div>
+
+    <h3>Lista de Estudiantes Reconocidos</h3>
+    <ul id="alumnosLista"></ul>
+</body>
+</html>
+
